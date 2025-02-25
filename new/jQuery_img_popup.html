@@ -1,0 +1,43 @@
+<!-- Bootstrap -->
+<script type="text/javascript" src='https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.3.min.js'></script>
+<script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/js/bootstrap.min.js'></script>
+<link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/css/bootstrap.min.css'
+    media="screen" />
+    
+<style>
+    .txt{
+        margin-top: 30px;
+    }
+</style>
+
+<center>
+    <p class="txt">Click this button to show image</p>
+    <button type="button" class="btn btn-info btn-lg popupbtn" data-toggle="modal">
+        Open Modal</button>
+</center>
+<!-- Modal Popup -->
+<div id="MyPopup" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal">
+                    &times;</button>
+                <img src="./img/img1.jpg" alt="flower" height="80px" width="80px">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal Popup -->
+
+
+<script type="text/javascript">
+    jQuery(function () {
+        jQuery('.popupbtn').click(function(){
+            jQuery('#MyPopup').modal("show");
+        })
+        jQuery("#btnClosePopup").click(function () {
+            jQuery("#MyPopup").modal("hide");
+        });
+    });
+</script>
